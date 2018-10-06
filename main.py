@@ -80,7 +80,7 @@ def validate():
             email_error = "Email cannot be less than 3 or greater than 20 characters."
 
     if username_error or password_error or email_error or verify_error:
-        return render_template("signup.html", username_error=username_error, password_error=password_error, verify_error=verify_error, email_error=email_error)
+        return render_template("signup.html", username_error=username_error, password_error=password_error, verify_error=verify_error, email_error=email_error, username=username, email=email)
 
     return render_template("home.html", username=username)
 
